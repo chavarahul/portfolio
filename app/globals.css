@@ -47,7 +47,7 @@
   }
 
   .space {
-    word-spacing: 5px;
+    word-spacing: 2px;
   }
   .shadow{
     filter: drop-shadow(0 0 5px #64dcdd);
@@ -56,6 +56,9 @@
     scroll-snap-type: y mandatory;
     overflow-y:scroll ;
     height: 100vh;
+  }
+  .lineSp{
+    line-height: 37px !important;
   }
 }
 .section{
@@ -147,7 +150,7 @@ body::-webkit-scrollbar {
 }
 
 .ani {
-  animation: downscroll 1.5s infinite;
+  animation: downscroll 3s infinite;
   transition: 1s;
 }
 
@@ -161,7 +164,7 @@ body::-webkit-scrollbar {
   }
 
   100% {
-    transform: translateY(30px);
+    transform: translateY(-30px);
   }
 }
 /* .animate-colorfill{
@@ -226,4 +229,63 @@ img{
   100% {
       d: path('M26.4,-16C32.8,-4.1,35.6,9,30.6,18.8C25.6,28.6,12.8,35.1,-0.2,35.2C-13.3,35.4,-26.5,29.2,-33,18.5C-39.5,7.8,-39.2,-7.3,-32.6,-19.4C-25.9,-31.4,-13,-40.3,-1.5,-39.4C10,-38.6,20,-27.9,26.4,-16Z');
   }
+}
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #050505;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: #050505;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #ffffffd3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: #050505;
+}
+
+.button:hover {
+  background: #ffffffd3
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #05050563;
+}
+
+.button:active {
+  border: 1px solid #146c54;
 }

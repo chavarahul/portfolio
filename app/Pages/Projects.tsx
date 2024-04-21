@@ -6,8 +6,8 @@ const Tech = () => {
     <div key={item.id}>
       <div className="w-[65%] p-1 flex justify-evenly items-center h-[5em] -ml-7">
         {
-          item.skills.map((skills: string) => (
-            <div key={skills} className="w-full h-full flex items-center justify-start  p-3 relative hover:shadow">
+          item.skills.map((skills: string,index:number) => (
+            <div key={index} className="w-full h-full flex items-center justify-start  p-3 relative hover:shadow">
               <div className="w-full bg-[#0000004b]  flex-center p-2 rounded-full h-full relative overflow-hidden size z-3 hover:text-[#000]">
                 <p className=" z-[999]">{skills}</p>
                 <div className="absolute rounded-full btnEff">
